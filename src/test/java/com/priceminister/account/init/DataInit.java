@@ -4,7 +4,6 @@ import com.priceminister.account.implementation.CustomerAccount;
 import org.springframework.stereotype.Component;
 
 
-@Component
 public class DataInit  {
 
 

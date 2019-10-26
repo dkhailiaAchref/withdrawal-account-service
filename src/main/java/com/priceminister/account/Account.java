@@ -12,7 +12,7 @@ public interface Account {
      * Adds money to this account.
      * @param addedAmount - the money to add
      */
-    public AccountModel add(Double addedAmount);
+    public AccountModel add(Double addedAmount) throws NegativeAmountException;
     
     /**
      * Withdraws money from the account.
@@ -21,7 +21,7 @@ public interface Account {
      * @return the remaining account balance
      * @throws IllegalBalanceException if the withdrawal leaves the account with a forbidden balance
      */
-    public Double withdrawAndReportBalance(Double withdrawnAmount, AccountRule rule) throws IllegalBalanceException;
+    public AccountModel withdrawAndReportBalance(Double withdrawnAmount, AccountRule rule) throws IllegalBalanceException;
     
     /**
      * Gets the current account balance.

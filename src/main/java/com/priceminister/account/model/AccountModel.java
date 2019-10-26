@@ -1,12 +1,12 @@
 package com.priceminister.account.model;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import java.util.List;
+
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class AccountModel {
-
-    private Long id;
     Amount amount ;
-    Amount withdrawnAmount;
+    List<Amount> withdrawnAmountHistory;
 
     public Amount getAmount() {
         return amount;
@@ -16,19 +16,12 @@ public class AccountModel {
         this.amount = amount;
     }
 
-    public Amount getWithdrawnAmount() {
-        return withdrawnAmount;
+    public List<Amount> getWithdrawnAmountHistory() {
+        return withdrawnAmountHistory;
     }
 
-    public void setWithdrawnAmount(Amount withdrawnAmount) {
-        this.withdrawnAmount = withdrawnAmount;
+    public void setWithdrawnAmountHistory(List<Amount> withdrawnAmount) {
+        this.withdrawnAmountHistory = withdrawnAmount;
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 }
